@@ -310,7 +310,8 @@ def build_evaluator_prompt(agent_id: str) -> str:
 if __name__ == "__main__":
     logger.info("Iniciando servidor MCP AmorSaúde-Central via SSE...")
     import uvicorn
-    # FastMCP can be served as an ASGI app directly or via get_asgi_app()
-    app = mcp.get_asgi_app()
+    # FastMCP exposes the SSE ASGI app via sse_app()
+    app = mcp.sse_app()
     uvicorn.run(app, host="0.0.0.0", port=settings.MCP_SERVER_PORT)
+
 
