@@ -45,6 +45,8 @@ logger = logging.getLogger(__name__)
 # Inicialização do servidor MCP
 # ══════════════════════════════════════════════════════════════════════════════
 
+from mcp.server.transport_security import TransportSecuritySettings
+
 mcp = FastMCP(
     "AmorSaude-Central",
     instructions=(
@@ -54,6 +56,10 @@ mcp = FastMCP(
         "avaliação de qualidade (LLM-as-Judge). "
         "Todas as ferramentas requerem um agent_id para validação de escopo."
     ),
+    stateless_http=True,
+    transport_security=TransportSecuritySettings(
+        enable_dns_rebinding_protection=False
+    )
 )
 
 
