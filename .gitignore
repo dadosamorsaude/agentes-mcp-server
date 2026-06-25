@@ -6,4 +6,3 @@ __pycache__/
 temp_audios/
 
 # UV
-uv.lock
