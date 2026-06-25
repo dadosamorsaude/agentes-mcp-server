@@ -1,0 +1,24 @@
+[project]
+name = "central-mcp-server"
+version = "0.1.0"
+description = "Servidor MCP centralizado para os agentes AmorSaúde"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.9.0",
+    "pyathena>=3.30.1",
+    "pinecone>=7.3.0",
+    "langchain-pinecone>=0.2.13",
+    "langchain-openai>=1.1.12",
+    "langchain-core>=1.2.26",
+    "openai>=1.60.0",
+    "python-dotenv>=1.2.2",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.3.0",
+]

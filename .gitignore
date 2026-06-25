@@ -1,0 +1,9 @@
+# Arquivos locais
+.env
+.venv/
+__pycache__/
+*.pyc
+temp_audios/
+
+# UV
+uv.lock

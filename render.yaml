@@ -1,0 +1,60 @@
+services:
+  - type: web
+    name: central-mcp-server
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: MCP_SERVER_PORT
+        value: 8000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: ATHENA_DATABASE
+        value: pdgt_amorsaude_tecnologia
+      - key: ATHENA_S3_STAGING_DIR
+        value: s3://todos-athena-us-east-1/
+      - key: MCP_API_KEY
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      # Índices do Pinecone
+      - key: PINECONE_INDEX_CFM
+        sync: false
+      - key: PINECONE_INDEX_POP
+        sync: false
+      - key: PINECONE_INDEX_HAS
+        sync: false
+      - key: PINECONE_RAG_INDEX
+        sync: false
+      # Namespaces do Pinecone
+      - key: PINECONE_NAMESPACE_CFM
+        sync: false
+      - key: PINECONE_NAMESPACE_REGRAS
+        sync: false
+      - key: PINECONE_NAMESPACE_RDC
+        sync: false
+      - key: PINECONE_NAMESPACE_HAS
+        sync: false
+      - key: PINECONE_NS_TREINAMENTO
+        sync: false
+      - key: PINECONE_NS_VOCABULARIO
+        sync: false
+      - key: PINECONE_NS_PRONTUARIOS
+        sync: false
+      # IDs de Segurança e Ofuscação dos Agentes
+      - key: AGENT_ID_CORA
+        value: agent-id-cora-uuid-placeholder
+      - key: AGENT_ID_AMORZITO
+        value: agent-id-amorzito-uuid-placeholder
+      - key: AGENT_ID_IRIS
+        value: agent-id-iris-uuid-placeholder
+      - key: AGENT_ID_AUXILIAR_MEDICO
+        value:  agent-id-auxmed-uuid-placeholder
+
