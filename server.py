@@ -124,11 +124,11 @@ async def search_similar_records_tool(
 def transcribe_audio_tool(file_path: str, agent_id: str) -> str:
     """Transcreve um arquivo de áudio usando OpenAI Whisper.
 
-    Somente agentes com transcrição habilitada podem usar (ex: amorzito, auxiliar-medico).
+    Somente agentes com transcrição habilitada podem usar (ex: auxiliar-medico).
 
     Args:
         file_path: Caminho completo para o arquivo de áudio.
-        agent_id: Identificador do agente (ex: amorzito, auxiliar-medico).
+        agent_id: Identificador do agente (ex: auxiliar-medico).
     """
     resolved_id = resolve_agent_id(agent_id)
     return transcribe_audio(file_path, resolved_id)

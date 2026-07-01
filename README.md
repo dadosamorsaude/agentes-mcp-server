@@ -7,7 +7,7 @@ Servidor MCP (Model Context Protocol) centralizado que unifica as ferramentas de
 | Agente | Athena | RAG | Busca Semântica | Transcrição | Evaluator |
 |---|---|---|---|---|---|
 | **Cora** | ✅ (Cardiologia/HAS) | HAS | ❌ | ❌ | ✅ Unificado |
-| **Amorzito** | ✅ (Qualidade/IQRC) | CFM, Regras, RDC, HAS | ❌ | ✅ | ✅ Unificado |
+| **Amorzito** | ✅ (Qualidade/IQRC) | CFM, Regras, RDC, HAS | ❌ | ❌ | ✅ Unificado |
 | **Iris** | ✅ (Catarata) | Catarata, Vocabulário | ✅ | ❌ | ✅ Unificado |
 | **Auxiliar Médico** | ❌ | CFM, Regras, RDC | ❌ | ✅ | ✅ Transcrição |
 

@@ -25,7 +25,7 @@ def transcribe_audio(file_path: str, agent_id: str) -> str:
 
     Args:
         file_path: Caminho completo para o arquivo de áudio a ser transcrito.
-        agent_id: Identificador do agente (ex: amorzito, auxiliar-medico).
+        agent_id: Identificador do agente (ex: auxiliar-medico).
 
     Returns:
         Texto transcrito ou mensagem de erro.
